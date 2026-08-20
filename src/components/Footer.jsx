@@ -2,6 +2,7 @@ import React from "react";
 import { Phone, MapPin, Instagram, Youtube, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { CONTACT, waLink } from "../data";
+import AstroLogo from "../Images/AstroLogo.webp";
 
 const QUICK = [
   { label: "About", href: "#about" },
@@ -34,11 +35,17 @@ export default function Footer() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-5">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center">
+            {/* <div className="w-12 h-12 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center">
               <span className="font-serif text-gold text-2xl">श</span>
-            </div>
+            </div> */}
             <div className="leading-tight">
-              <div className="font-serif text-2xl">Astrologer Shilpa</div>
+             <div className="font-serif text-xl text-ink">
+                           <img
+                             src={AstroLogo}
+                             alt="Astrologer Shilpa"
+                             className="h-14 w-auto max-w-[220px] object-contain sm:h-16 sm:max-w-[235px] lg:h-14 lg:max-w-[215px]"
+                           />
+                         </div>
               <div className="text-[10px] tracking-[0.3em] uppercase text-gold">
                 Vedic · Jaipur
               </div>
