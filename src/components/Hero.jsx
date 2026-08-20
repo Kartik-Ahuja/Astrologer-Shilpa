@@ -6,7 +6,7 @@ import { CONTACT, waLink } from "../data";
 import HeroImage from "../Images/Hero.webp";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 1, y: 0 },
   show: (i = 0) => ({
     opacity: 1,
     y: 0,
@@ -19,7 +19,7 @@ export default function Hero() {
     <section
       id="home"
       data-testid="hero-section"
-      className="relative flex w-full items-start overflow-hidden bg-[#FAFAFA] pt-24 pb-10 lg:min-h-svh lg:items-center lg:pt-36 lg:pb-28"
+      className="relative flex w-full items-start overflow-hidden bg-[#FAFAFA] pt-28 pb-16 lg:min-h-svh lg:items-center lg:pt-36 lg:pb-28"
     >
       {/* Decorative background */}
       <div
@@ -35,24 +35,20 @@ export default function Hero() {
         aria-hidden
       />
 
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="relative w-full max-w-7xl mx-auto px-5 sm:px-6 md:px-12 lg:px-16 grid lg:grid-cols-12 gap-12 lg:gap-12 items-center">
         <div className="lg:col-span-7 text-center lg:text-left">
           <motion.div
-            initial="hidden"
-            animate="show"
+            initial={false}
             custom={0}
-            variants={fadeUp}
             className="section-label justify-center lg:justify-start mb-6"
           >
             <span>Vedic Astrology · Jaipur</span>
           </motion.div>
 
           <motion.h1
-            initial="hidden"
-            animate="show"
+            initial={false}
             custom={1}
-            variants={fadeUp}
-            className="font-serif text-[2.15rem] sm:text-[3.75rem] lg:text-[4.25rem] leading-[1.05] tracking-tight text-ink"
+            className="font-serif text-[2.15rem] sm:text-[3.75rem] lg:text-[4.25rem] leading-[1.05] tracking-tight text-ink max-w-3xl mx-auto lg:mx-0"
             data-testid="hero-headline"
           >
             Best Astrologer in <span className="gold-text italic">Jaipur</span>
@@ -61,10 +57,8 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            initial="hidden"
-            animate="show"
+            initial={false}
             custom={2}
-            variants={fadeUp}
             className="mt-5 max-w-2xl mx-auto lg:mx-0 text-base sm:text-lg text-ink-muted leading-relaxed"
           >
             Get personalized guidance for{" "}
@@ -77,11 +71,9 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            initial="hidden"
-            animate="show"
+            initial={false}
             custom={3}
-            variants={fadeUp}
-            className="mt-7 flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3"
+            className="mt-7 flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3 max-w-xl mx-auto lg:mx-0"
           >
             <Button
               asChild
@@ -125,10 +117,8 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            initial="hidden"
-            animate="show"
+            initial={false}
             custom={4}
-            variants={fadeUp}
             className="mt-7 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3 text-xs sm:text-sm text-ink-muted"
           >
             <div className="flex items-center gap-2">
@@ -144,13 +134,8 @@ export default function Hero() {
         </div>
 
         {/* Visual */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:col-span-5 relative"
-        >
-          <div className="relative mx-auto w-full max-w-md sm:max-w-lg lg:max-w-md">
+        <motion.div initial={false} className="lg:col-span-5 relative">
+          <div className="relative mx-auto w-full max-w-[22rem] sm:max-w-lg lg:max-w-md">
             {/* Gold offset frame */}
             <div
               className="absolute inset-0 translate-x-3 translate-y-3 border border-gold/50 hero-arch pointer-events-none"
@@ -160,7 +145,7 @@ export default function Hero() {
               <img
                 src={HeroImage}
                 alt="Astrologer Shilpa Tibrewal — Best Astrologer in Jaipur"
-                className="w-full h-[420px] sm:h-[520px] lg:h-[520px] object-cover object-top"
+                className="w-full h-[360px] sm:h-[520px] lg:h-[520px] object-cover object-top"
                 loading="eager"
               />
             </div>
