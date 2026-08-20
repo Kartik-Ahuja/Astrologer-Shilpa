@@ -238,7 +238,7 @@ export default function Contact() {
             <div className="rounded-2xl overflow-hidden border border-beige-100 shadow-soft bg-white">
               <iframe
                 title="Astrologer Shilpa Location — Muhana, Jaipur"
-                src="https://www.google.com/maps?q=Manglam+Garden+City+Muhana+Jaipur+Rajasthan+302029&output=embed"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=75.726418%2C26.78841%2C75.746418%2C26.80841&layer=mapnik&marker=26.79841%2C75.736418"
                 className="w-full h-72"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

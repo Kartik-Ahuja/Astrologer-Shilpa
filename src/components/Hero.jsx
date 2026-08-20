@@ -19,7 +19,8 @@ export default function Hero() {
     <section
       id="home"
       data-testid="hero-section"
-className="relative flex min-h-[60svh] w-full items-center overflow-hidden bg-[#FAFAFA] pt-24 pb-12 lg:pt-36 lg:pb-28"    >
+      className="relative flex w-full items-start overflow-hidden bg-[#FAFAFA] pt-24 pb-10 lg:min-h-svh lg:items-center lg:pt-36 lg:pb-28"
+    >
       {/* Decorative background */}
       <div
         className="absolute inset-0 mandala-bg pointer-events-none"
@@ -34,7 +35,7 @@ className="relative flex min-h-[60svh] w-full items-center overflow-hidden bg-[#
         aria-hidden
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 md:px-12 lg:px-16 grid lg:grid-cols-12 gap-12 items-center">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         <div className="lg:col-span-7 text-center lg:text-left">
           <motion.div
             initial="hidden"
@@ -51,7 +52,7 @@ className="relative flex min-h-[60svh] w-full items-center overflow-hidden bg-[#
             animate="show"
             custom={1}
             variants={fadeUp}
-            className="font-serif text-[3.25rem] sm:text-[4.75rem] lg:text-[5.25rem] leading-[1.05] tracking-tight text-ink"
+            className="font-serif text-[2.15rem] sm:text-[3.75rem] lg:text-[4.25rem] leading-[1.05] tracking-tight text-ink"
             data-testid="hero-headline"
           >
             Best Astrologer in <span className="gold-text italic">Jaipur</span>
@@ -64,7 +65,7 @@ className="relative flex min-h-[60svh] w-full items-center overflow-hidden bg-[#
             animate="show"
             custom={2}
             variants={fadeUp}
-            className="mt-8 max-w-2xl mx-auto lg:mx-0 text-[2.05rem] sm:text-2xl text-ink-muted leading-relaxed"
+            className="mt-5 max-w-2xl mx-auto lg:mx-0 text-base sm:text-lg text-ink-muted leading-relaxed"
           >
             Get personalized guidance for{" "}
             <strong className="text-ink font-medium">
@@ -80,12 +81,12 @@ className="relative flex min-h-[60svh] w-full items-center overflow-hidden bg-[#
             animate="show"
             custom={3}
             variants={fadeUp}
-            className="mt-10 flex flex-wrap justify-center lg:justify-start gap-4"
+            className="mt-7 flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3"
           >
             <Button
               asChild
               size="lg"
-              className="bg-gold hover:bg-gold-dark text-white rounded-full h-14 px-8 text-base font-medium shadow-gold hover:shadow-gold-glow transition-all duration-300 hover:-translate-y-0.5"
+              className="w-full sm:w-auto bg-gold hover:bg-gold-dark text-white rounded-full h-12 px-6 text-sm sm:text-base font-medium shadow-gold hover:shadow-gold-glow transition-all duration-300 hover:-translate-y-0.5"
               data-testid="hero-book-btn"
             >
               <a href="#contact">
@@ -96,7 +97,7 @@ className="relative flex min-h-[60svh] w-full items-center overflow-hidden bg-[#
               asChild
               size="lg"
               variant="outline"
-              className="border-gold/60 text-ink hover:bg-gold/5 hover:border-gold rounded-full h-14 px-8 text-base font-medium transition-all duration-300 hover:-translate-y-0.5"
+              className="w-full sm:w-auto border-gold/60 text-ink hover:bg-gold/5 hover:border-gold rounded-full h-12 px-6 text-sm sm:text-base font-medium transition-all duration-300 hover:-translate-y-0.5"
               data-testid="hero-whatsapp-btn"
             >
               <a
@@ -114,7 +115,7 @@ className="relative flex min-h-[60svh] w-full items-center overflow-hidden bg-[#
               asChild
               size="lg"
               variant="ghost"
-              className="text-ink hover:text-gold-dark rounded-full h-14 px-6 text-base font-medium"
+              className="w-full sm:w-auto text-ink hover:text-gold-dark rounded-full h-12 px-6 text-sm sm:text-base font-medium"
               data-testid="hero-call-btn"
             >
               <a href={`tel:${CONTACT.phoneRaw}`}>
@@ -128,7 +129,7 @@ className="relative flex min-h-[60svh] w-full items-center overflow-hidden bg-[#
             animate="show"
             custom={4}
             variants={fadeUp}
-            className="mt-12 flex flex-wrap justify-center lg:justify-start gap-x-10 gap-y-4 text-sm text-ink-muted"
+            className="mt-7 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3 text-xs sm:text-sm text-ink-muted"
           >
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-gold" /> 20+ Years of Experience
@@ -159,7 +160,7 @@ className="relative flex min-h-[60svh] w-full items-center overflow-hidden bg-[#
               <img
                 src={HeroImage}
                 alt="Astrologer Shilpa Tibrewal — Best Astrologer in Jaipur"
-                className="w-full h-[620px] sm:h-[680px] lg:h-[520px] object-cover object-top"
+                className="w-full h-[420px] sm:h-[520px] lg:h-[520px] object-cover object-top"
                 loading="eager"
               />
             </div>
