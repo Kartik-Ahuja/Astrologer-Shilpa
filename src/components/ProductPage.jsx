@@ -10,6 +10,8 @@ export default function ProductPage() {
   useEffect(() => {
     if (!product) return undefined;
 
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+
     const previousTitle = document.title;
     const description = document.querySelector('meta[name="description"]');
     const previousDescription = description?.getAttribute("content");
