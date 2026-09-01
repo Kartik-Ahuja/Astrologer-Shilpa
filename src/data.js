@@ -28,9 +28,9 @@ import RoseQuartz from "./Images/RoseQuartz.webp";
 import YellowCitrine from "./Images/YellowCitrine.webp";
 
 export const CONTACT = {
-  phone: "+91 97695 71305",
-  phoneRaw: "+919769571305",
-  whatsapp: "919769571305",
+  phone: "+91 63677 35970",
+  phoneRaw: "+916367735970",
+  whatsapp: "916367735970",
   email: "astrologershipla1@gmail.com",
   address:
     "B Block 302, Manglam Garden City, Near Manglam Tarang, Near Muhana Gaav, Muhana, Jaipur, Rajasthan 302029",
@@ -40,7 +40,7 @@ export const CONTACT = {
 };
 
 export const waLink = (msg) =>
-  `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(msg || "Namaste Shilpa ji, I would like to book a consultation.")}`;
+  `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(msg || "Namaste Shilpa ji, I would like to book a consultation. Bas call me voi rhene dena!")}`;
 
 export const SERVICES = [
   {
@@ -154,85 +154,85 @@ export const PRODUCTS = [
   },
   {
     slug: "pyrite-bracelet",
-  name: "Pyrite Bracelet",
-  shortDescription:
-    "A striking bracelet traditionally associated with confidence, abundance, protection and positive energy.",
-  description:
-    "The Pyrite Bracelet combines a bold metallic-inspired appearance with traditional symbolism connected to prosperity, confidence and determination. It is designed for everyday wear as a reminder of ambition and positive energy.",
-  price: 999,
-  image: Pyrite,
-  details: [
-    "Polished pyrite-style beads",
-    "Traditionally associated with abundance and prosperity",
-    "Symbolises confidence and determination",
-    "Suitable for daily wear",
+    name: "Pyrite Bracelet",
+    shortDescription:
+      "A striking bracelet traditionally associated with confidence, abundance, protection and positive energy.",
+    description:
+      "The Pyrite Bracelet combines a bold metallic-inspired appearance with traditional symbolism connected to prosperity, confidence and determination. It is designed for everyday wear as a reminder of ambition and positive energy.",
+    price: 999,
+    image: Pyrite,
+    details: [
+      "Polished pyrite-style beads",
+      "Traditionally associated with abundance and prosperity",
+      "Symbolises confidence and determination",
+      "Suitable for daily wear",
     ],
   },
   {
     slug: "yellow-citrine-bracelet",
-  name: "Yellow Citrine Bracelet",
-  shortDescription:
-    "A vibrant bracelet traditionally associated with positivity, abundance, confidence and joyful energy.",
-  description:
-    "The Yellow Citrine Bracelet features warm golden-yellow tones and is traditionally connected with abundance, optimism and personal confidence. It can be worn as a symbolic reminder to stay positive and focused on growth.",
-  price: 799,
-  image: YellowCitrine,
-  details: [
-    "Polished yellow stone-style beads",
-    "Traditionally associated with abundance and positivity",
-    "Symbolises confidence and optimism",
-    "Suitable for everyday wear",
+    name: "Yellow Citrine Bracelet",
+    shortDescription:
+      "A vibrant bracelet traditionally associated with positivity, abundance, confidence and joyful energy.",
+    description:
+      "The Yellow Citrine Bracelet features warm golden-yellow tones and is traditionally connected with abundance, optimism and personal confidence. It can be worn as a symbolic reminder to stay positive and focused on growth.",
+    price: 799,
+    image: YellowCitrine,
+    details: [
+      "Polished yellow stone-style beads",
+      "Traditionally associated with abundance and positivity",
+      "Symbolises confidence and optimism",
+      "Suitable for everyday wear",
     ],
   },
 
   {
     slug: "rose-quartz-tumbler-bracelet",
-  name: "Rose Quartz Tumbler Bracelet",
-  shortDescription:
-    "A soft pink bracelet traditionally associated with love, harmony, compassion and self-care.",
-  description:
-    "The Rose Quartz Tumbler Bracelet features elegant pink-toned polished beads and is traditionally associated with love, emotional harmony and gentle energy. A beautiful everyday accessory with a soft and elegant aesthetic.",
-  price: 799,
-  image: RoseQuartz,
-  details: [
-    "Polished rose-pink beads",
-    "Traditionally associated with love and harmony",
-    "Symbolises compassion and self-care",
-    "Suitable for daily wear",
+    name: "Rose Quartz Tumbler Bracelet",
+    shortDescription:
+      "A soft pink bracelet traditionally associated with love, harmony, compassion and self-care.",
+    description:
+      "The Rose Quartz Tumbler Bracelet features elegant pink-toned polished beads and is traditionally associated with love, emotional harmony and gentle energy. A beautiful everyday accessory with a soft and elegant aesthetic.",
+    price: 799,
+    image: RoseQuartz,
+    details: [
+      "Polished rose-pink beads",
+      "Traditionally associated with love and harmony",
+      "Symbolises compassion and self-care",
+      "Suitable for daily wear",
     ],
   },
 
   {
     slug: "evil-eye-bracelet",
-  name: "Evil Eye Bracelet",
-  shortDescription:
-    "A classic symbolic bracelet traditionally worn as a protective charm against negative energy.",
-  description:
-    "The Evil Eye Bracelet combines a timeless blue design with the traditional symbolism of the evil eye. It is commonly worn as a symbolic protective accessory and a reminder of positivity and awareness.",
-  price: 799,
-  image: EvilEye,
-  details: [
-    "Classic blue evil eye design",
-    "Traditionally associated with protection",
-    "Symbolises positivity and awareness",
-    "Suitable for everyday wear",
+    name: "Evil Eye Bracelet",
+    shortDescription:
+      "A classic symbolic bracelet traditionally worn as a protective charm against negative energy.",
+    description:
+      "The Evil Eye Bracelet combines a timeless blue design with the traditional symbolism of the evil eye. It is commonly worn as a symbolic protective accessory and a reminder of positivity and awareness.",
+    price: 799,
+    image: EvilEye,
+    details: [
+      "Classic blue evil eye design",
+      "Traditionally associated with protection",
+      "Symbolises positivity and awareness",
+      "Suitable for everyday wear",
     ],
   },
 
   {
     slug: "om-bracelet",
-  name: "Om Bracelet",
-  shortDescription:
-    "A spiritual bracelet featuring the Om symbol, traditionally associated with peace, harmony and mindfulness.",
-  description:
-    "The Om Bracelet combines a classic beaded design with the sacred Om symbol. Traditionally connected with spiritual awareness, balance and inner harmony, it makes a meaningful everyday accessory.",
-  price: 399,
-  image: Om,
-  details: [
-    "Classic dark polished beads",
-    "Features an Om symbol charm",
-    "Traditionally associated with peace and harmony",
-    "Suitable for daily spiritual and everyday wear"
+    name: "Om Bracelet",
+    shortDescription:
+      "A spiritual bracelet featuring the Om symbol, traditionally associated with peace, harmony and mindfulness.",
+    description:
+      "The Om Bracelet combines a classic beaded design with the sacred Om symbol. Traditionally connected with spiritual awareness, balance and inner harmony, it makes a meaningful everyday accessory.",
+    price: 399,
+    image: Om,
+    details: [
+      "Classic dark polished beads",
+      "Features an Om symbol charm",
+      "Traditionally associated with peace and harmony",
+      "Suitable for daily spiritual and everyday wear",
     ],
   },
 ];
