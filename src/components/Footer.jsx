@@ -7,6 +7,7 @@ import AstroLogo from "../Images/AstroLogo.webp";
 const QUICK = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Book Slot", href: "/book" },
   { label: "Consultation", href: "#consultation" },
   { label: "Products", href: "/products" },
   { label: "Testimonials", href: "#testimonials" },
@@ -35,9 +36,6 @@ export default function Footer() {
       <div className="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-16 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-5">
           <div className="flex items-center gap-3">
-            {/* <div className="w-12 h-12 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center">
-              <span className="font-serif text-gold text-2xl">श</span>
-            </div> */}
             <div className="leading-tight">
              <div className="font-serif text-xl text-ink">
                            <img

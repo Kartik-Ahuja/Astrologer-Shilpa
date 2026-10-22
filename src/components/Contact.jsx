@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, MapPin, Instagram, Youtube, Send, Loader2 } from "lucide-react";
+import { Phone, MapPin, Instagram, Youtube, Send, Loader2, Calendar, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
 import { CONTACT, SERVICES, waLink } from "../data";
+import { useBooking } from "../context/BookingContext";
 
 export default function Contact() {
+  const { openBooking } = useBooking();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -59,6 +61,19 @@ export default function Contact() {
             Share your details below or reach out directly — we usually respond
             within a few hours.
           </p>
+
+          {/* Quick Slot Booking Action */}
+          <div className="mt-7 inline-flex flex-col sm:flex-row items-center gap-3 p-2 sm:pr-4 rounded-3xl bg-white border border-gold/40 shadow-soft">
+            <span className="text-xs text-ink font-medium px-3 flex items-center gap-1.5">
+              <Sparkles className="w-4 h-4 text-gold" /> Want an immediate slot? Audio Call (₹1,000) or Online Pooja (₹5,000)
+            </span>
+            <Button
+              onClick={() => openBooking({ type: "consultation" })}
+              className="bg-gold hover:bg-gold-dark text-white rounded-full h-9 px-4 text-xs font-semibold shadow-gold"
+            >
+              <Calendar className="w-3.5 h-3.5 mr-1.5" /> Book Slot Now
+            </Button>
+          </div>
         </div>
 
         <div className="mt-14 grid lg:grid-cols-12 gap-10">

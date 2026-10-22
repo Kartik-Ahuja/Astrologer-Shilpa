@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Phone, MessageCircle, Calendar, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { CONTACT, waLink } from "../data";
+import { useBooking } from "../context/BookingContext";
 import HeroImage from "../Images/Hero.webp";
 
 const fadeUp = {
@@ -15,6 +16,8 @@ const fadeUp = {
 };
 
 export default function Hero() {
+  const { openBooking } = useBooking();
+
   return (
     <section
       id="home"
@@ -76,14 +79,13 @@ export default function Hero() {
             className="mt-7 flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3 max-w-xl mx-auto lg:mx-0"
           >
             <Button
-              asChild
+              onClick={() => openBooking({ type: "consultation" })}
               size="lg"
-              className="w-full sm:w-auto bg-gold hover:bg-gold-dark text-white rounded-full h-12 px-6 text-sm sm:text-base font-medium shadow-gold hover:shadow-gold-glow transition-all duration-300 hover:-translate-y-0.5"
+              className="w-full sm:w-auto bg-gold hover:bg-gold-dark text-white rounded-full h-12 px-6 text-sm sm:text-base font-medium shadow-gold hover:shadow-gold-glow transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center"
               data-testid="hero-book-btn"
             >
-              <a href="#contact">
-                <Calendar className="w-5 h-5 mr-2" /> Book Consultation
-              </a>
+              <Calendar className="w-5 h-5 mr-2" /> Book Slot (₹1,000 /
+              10minute)
             </Button>
             <Button
               asChild

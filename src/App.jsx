@@ -19,6 +19,24 @@ import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Products from "./components/Products";
 import ProductPage from "./components/ProductPage";
 import ProductsPage from "./components/ProductsPage";
+import BookingPage from "./components/BookingPage";
+import BookingModal from "./components/BookingModal";
+import CartDrawer from "./components/CartDrawer";
+import CartCheckoutModal from "./components/CartCheckoutModal";
+import { BookingProvider, useBooking } from "./context/BookingContext";
+import { CartProvider } from "./context/CartContext";
+
+const GlobalBookingModal = () => {
+  const { isOpen, closeBooking, bookingOptions } = useBooking();
+  return (
+    <BookingModal
+      isOpen={isOpen}
+      onClose={closeBooking}
+      initialType={bookingOptions.type}
+      initialService={bookingOptions.service}
+    />
+  );
+};
 
 const Home = () => (
   <div className="bg-[#FAFAFA] text-ink min-h-screen">
@@ -40,23 +58,30 @@ const Home = () => (
 
     <Footer />
     <FloatingWhatsApp />
-
-    <Toaster position="top-center" richColors closeButton />
   </div>
 );
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/products/:slug" element={<ProductPage />} />
-          <Route path="/product/:slug" element={<ProductPage />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BookingProvider>
+      <CartProvider>
+        <div className="App">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/book" element={<BookingPage />} />
+              <Route path="/products" element={<ProductsPage />} />
+              <Route path="/products/:slug" element={<ProductPage />} />
+              <Route path="/product/:slug" element={<ProductPage />} />
+            </Routes>
+            <GlobalBookingModal />
+            <CartDrawer />
+            <CartCheckoutModal />
+          </BrowserRouter>
+          <Toaster position="top-center" richColors closeButton />
+        </div>
+      </CartProvider>
+    </BookingProvider>
   );
 }
 

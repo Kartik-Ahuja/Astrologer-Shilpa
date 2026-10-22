@@ -28,9 +28,9 @@ import RoseQuartz from "./Images/RoseQuartz.webp";
 import YellowCitrine from "./Images/YellowCitrine.webp";
 
 export const CONTACT = {
-  phone: "+91 63677 35970",
-  phoneRaw: "+916367735970",
-  whatsapp: "916367735970",
+  phone: "+91 89499 36535",
+  phoneRaw: "+918949936535",
+  whatsapp: "918949936535",
   email: "astrologershipla1@gmail.com",
   address:
     "B Block 302, Manglam Garden City, Near Manglam Tarang, Near Muhana Gaav, Muhana, Jaipur, Rajasthan 302029",
@@ -40,7 +40,20 @@ export const CONTACT = {
 };
 
 export const waLink = (msg) =>
-  `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(msg || "Namaste Shilpa ji, I would like to book a consultation. Bas call me voi rhene dena!")}`;
+  `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(msg || "Namaste Shilpa ji, I would like to book a consultation.")}`;
+
+export const UPI_CONFIG = {
+  upiId: "navratan0442@ybl",
+  payeeName: "Astrologer Shilpa",
+};
+
+export const buildUpiPaymentUri = ({ amount, note, orderId }) => {
+  const upiId = UPI_CONFIG.upiId;
+  const name = UPI_CONFIG.payeeName;
+  const cleanAmount = Number(amount || 0).toFixed(2);
+  const safeNote = note || `Order ${orderId || ""} - Astrologer Shilpa`;
+  return `upi://pay?pa=${encodeURIComponent(upiId)}&pn=${encodeURIComponent(name)}&am=${cleanAmount}&cu=INR&tn=${encodeURIComponent(safeNote)}`;
+};
 
 export const SERVICES = [
   {
@@ -374,3 +387,252 @@ export const FAQS = [
   //   a: "Yes. Home Vastu and Office Vastu consultations are available both online (via floor plan) and on-site in Jaipur. Practical, non-destructive remedies are provided wherever possible.",
   // },
 ];
+
+export const BOOKING_CONFIG = {
+  consultation: {
+    id: "consultation",
+    type: "consultation",
+    title: "Audio Consultation",
+    badge: "10 Min Audio Call",
+    price: 1000,
+    formattedPrice: "₹1,000",
+    duration: "10 Minutes Audio Call",
+    subtitle:
+      "Direct 1-on-1 audio call with Shilpa ji for fast & accurate guidance.",
+    description:
+      "Get authentic Vedic guidance on your Janam Kundli, love life, career, finances, or family problems with actionable remedies.",
+    features: [
+      "10-minute focused audio call with Shilpa ji",
+      "Kundli & planetary dasha insights",
+      "Practical, easy-to-do Vedic remedies",
+      "100% confidential discussion",
+    ],
+  },
+  pooja: {
+    id: "pooja",
+    type: "pooja",
+    title: "Online Vedic Pooja",
+    badge: "Full Vidhi + Prasad Delivery",
+    price: 5000,
+    formattedPrice: "₹5,000",
+    duration: "Complete Vedic Ritual",
+    subtitle:
+      "Performed on your behalf with personal Sankalp on your Name & Gotra.",
+    description:
+      "Traditional Vedic pooja guided by Shilpa ji and Vedic Pandits with proper sankalp. Sanctified Prasad, Raksha Sutra & Yantra delivered to your home address.",
+    features: [
+      "Personal Sankalp with your Name & Gotra",
+      "Vedic Pandits reciting sacred Vedic mantras",
+      "Live photos / video clips sent on WhatsApp",
+      "Doorstep delivery of sanctified Prasad & Raksha Kavach",
+    ],
+  },
+};
+
+export const CONSULTATION_TOPICS = [
+  "Kundli Reading & Janam Patrika",
+  "Career, Job & Business Growth",
+  "Love, Relationship & Marriage Compatibility",
+  "Financial Obstacles & Debt Remedies",
+  "Health, Mental Peace & Family Disputes",
+  "Palm & Face Reading Insights",
+  "Numerology & Lucky Name Correction",
+  "General Life Guidance & Muhurat",
+];
+
+export const ONLINE_POOJAS = [
+  {
+    id: "navgrah-shanti",
+    name: "Navgrah Shanti Pooja",
+    price: 5000,
+    benefit:
+      "Pacifies all 9 planetary doshas, brings harmony and removes recurring hurdles.",
+    icon: "Stars",
+  },
+  {
+    id: "mahamrityunjay",
+    name: "Mahamrityunjay Jaap",
+    price: 5000,
+    benefit:
+      "Powerful Shiva mantra jaap for health, recovery, protection and longevity.",
+    icon: "Flame",
+  },
+  {
+    id: "kaal-sarp",
+    name: "Kaal Sarp Dosh Pooja",
+    price: 5000,
+    benefit:
+      "Relieves career stagnation, marriage delays and sudden hurdles caused by Rahu-Ketu.",
+    icon: "Sparkles",
+  },
+  {
+    id: "manglik-dosh",
+    name: "Manglik Dosh Nivaran Pooja",
+    price: 5000,
+    benefit:
+      "Calms high Mars energy, resolves marital delays and protects relationship peace.",
+    icon: "Heart",
+  },
+  {
+    id: "lakshmi-pooja",
+    name: "Maha Lakshmi & Kuber Pooja",
+    price: 5000,
+    benefit:
+      "Attracts financial prosperity, business growth, abundance and auspicious energy.",
+    icon: "IndianRupee",
+  },
+  {
+    id: "ganesh-pooja",
+    name: "Siddhi Vinayak Ganesh Pooja",
+    price: 5000,
+    benefit:
+      "Vighnaharta blessings for successful new ventures, education and removal of obstacles.",
+    icon: "Sun",
+  },
+  {
+    id: "rudrabhishek",
+    name: "Maha Rudrabhishek Pooja",
+    price: 5000,
+    benefit:
+      "Sacred Panchamrit abhishek of Lord Shiva for inner peace, purification and blessings.",
+    icon: "Flame",
+  },
+  {
+    id: "pitra-dosh",
+    name: "Pitra Dosh Nivaran Pooja",
+    price: 5000,
+    benefit:
+      "Ancestral peace, family progress, progeny blessings and removing inherited blocks.",
+    icon: "Users",
+  },
+  {
+    id: "shiv-parvati-vivah",
+    name: "Shiv Parvati Vivah Pooja",
+    price: 5000,
+    benefit:
+      "Ideal for finding the right life partner, timely marriage and lifelong affection.",
+    icon: "HeartHandshake",
+  },
+];
+
+export const TIME_SLOTS = [
+  { id: "m1", label: "10:00 AM - 11:30 AM", period: "Morning" },
+  { id: "m2", label: "11:30 AM - 01:00 PM", period: "Morning" },
+  { id: "a1", label: "02:00 PM - 03:30 PM", period: "Afternoon" },
+  { id: "a2", label: "03:30 PM - 05:00 PM", period: "Afternoon" },
+  { id: "e1", label: "05:30 PM - 07:00 PM", period: "Evening" },
+  { id: "e2", label: "07:00 PM - 08:30 PM", period: "Evening" },
+];
+
+export const formatBookingWhatsAppMessage = (booking) => {
+  const isPooja = booking.type === "pooja";
+  const title = isPooja
+    ? "ONLINE POOJA BOOKING"
+    : "CONSULTATION (AUDIO CALL) BOOKING";
+
+  const lines = [
+    `🕉️ *NEW ${title} - ASTROLOGER SHILPA* 🕉️`,
+    ``,
+    `*Booking ID:* #${booking.bookingId || "PENDING"}`,
+    `*Service:* ${booking.serviceName || (isPooja ? "Online Vedic Pooja" : "10 Min Audio Consultation")}`,
+    `*Fee / Dakshina:* ₹${booking.amount?.toLocaleString("en-IN") || (isPooja ? "5,000" : "1,000")}`,
+    `*Payment Method:* ⚡ Direct UPI (0% Fee)`,
+    `*Payment Status:* ✅ Paid via UPI (${booking.utr ? `UTR: ${booking.utr}` : `Ref: ${booking.paymentId || "CONFIRMED"}`})`,
+    `*UPI ID:* ${UPI_CONFIG.upiId}`,
+    booking.screenshot ? `• *Receipt Screenshot:* (Attached)` : null,
+    ``,
+    `📅 *SCHEDULED SLOT:*`,
+    `• Date: ${booking.dateFormatted || booking.date || "Not Selected"}`,
+    `• Time Slot: ${booking.slot || "Not Selected"}`,
+    ``,
+    `👤 *DEVOTEE / CLIENT DETAILS:*`,
+    `• Name: ${booking.name || "N/A"}`,
+    `• Phone: ${booking.phone || "N/A"}`,
+    booking.email ? `• Email: ${booking.email}` : null,
+    booking.dob ? `• DOB: ${booking.dob}` : null,
+    booking.birthTime ? `• Birth Time: ${booking.birthTime}` : null,
+    booking.birthPlace ? `• Birth Place: ${booking.birthPlace}` : null,
+    booking.gotra ? `• Gotra / Father's Name: ${booking.gotra}` : null,
+    ``,
+    `📦 *DELIVERY ADDRESS (FOR PRASAD & BLESSINGS):*`,
+    `• Address: ${booking.address || "N/A"}`,
+    booking.landmark ? `• Landmark: ${booking.landmark}` : null,
+    `• City: ${booking.city || "N/A"}, ${booking.state || "Rajasthan"}`,
+    `• Pincode: ${booking.pincode || "N/A"}`,
+    ``,
+    booking.notes
+      ? `💬 *Sankalp / Concern / Question:*\n"${booking.notes}"\n`
+      : null,
+    `🙏 *Namaste Shilpa ji, please review and confirm this booking.*`,
+  ];
+
+  return lines.filter(Boolean).join("\n");
+};
+
+export const formatProductOrderWhatsAppMessage = (order) => {
+  const lines = [
+    `🛍️ *NEW PRODUCT ORDER - ASTROLOGER SHILPA* 🛍️`,
+    ``,
+    `*Order ID:* #${order.orderId || "CONFIRMED"}`,
+    `*Product:* ${order.productName} (Qty: ${order.quantity || 1})`,
+    `*Amount:* ₹${order.amount?.toLocaleString("en-IN")}`,
+    `*Payment Method:* ⚡ Direct UPI (0% Fee)`,
+    `*Payment Status:* ✅ Paid via UPI (${order.utr ? `UTR: ${order.utr}` : `Ref: ${order.paymentId || "CONFIRMED"}`})`,
+    `*UPI ID:* ${UPI_CONFIG.upiId}`,
+    order.screenshot ? `• *Receipt Screenshot:* (Attached)` : null,
+    ``,
+    `👤 *CUSTOMER DETAILS:*`,
+    `• Name: ${order.name}`,
+    `• Phone: ${order.phone}`,
+    order.email ? `• Email: ${order.email}` : null,
+    ``,
+    `📦 *DELIVERY ADDRESS:*`,
+    `• Address: ${order.address}`,
+    order.landmark ? `• Landmark: ${order.landmark}` : null,
+    `• City: ${order.city}, ${order.state || "Rajasthan"}`,
+    `• Pincode: ${order.pincode}`,
+    ``,
+    `🙏 *Namaste Shilpa ji, I have completed the payment via UPI for this order on your website. Please dispatch the energized product to my address.*`,
+  ];
+
+  return lines.filter(Boolean).join("\n");
+};
+
+export const formatMultiItemOrderWhatsAppMessage = (order) => {
+  const itemsList = (order.items || [])
+    .map(
+      (item, idx) =>
+        `• *${item.product.name}* (Qty: ${item.quantity}) - ₹${(item.product.price * item.quantity).toLocaleString("en-IN")}`,
+    )
+    .join("\n");
+
+  const lines = [
+    `🛍️ *NEW CART ORDER - ASTROLOGER SHILPA* 🛍️`,
+    ``,
+    `*Order ID:* #${order.orderId || "CONFIRMED"}`,
+    `*Total Items:* ${order.totalItems || order.items?.length || 1}`,
+    `*Total Amount:* ₹${order.totalAmount?.toLocaleString("en-IN")}`,
+    `*Payment Method:* ⚡ Direct UPI (0% Fee)`,
+    `*Payment Status:* ✅ Paid via UPI (${order.utr ? `UTR: ${order.utr}` : `Ref: ${order.paymentId || "CONFIRMED"}`})`,
+    `*UPI ID:* ${UPI_CONFIG.upiId}`,
+    order.screenshot ? `• *Receipt Screenshot:* (Attached)` : null,
+    ``,
+    `📦 *ORDERED ITEMS:*`,
+    itemsList,
+    ``,
+    `👤 *CUSTOMER DETAILS:*`,
+    `• Name: ${order.name}`,
+    `• Phone: ${order.phone}`,
+    order.email ? `• Email: ${order.email}` : null,
+    ``,
+    `🚚 *DELIVERY ADDRESS:*`,
+    `• Address: ${order.address}`,
+    order.landmark ? `• Landmark: ${order.landmark}` : null,
+    `• City: ${order.city}, ${order.state || "Rajasthan"}`,
+    `• Pincode: ${order.pincode}`,
+    ``,
+    `🙏 *Namaste Shilpa ji, I have placed this order and completed payment via UPI. Please dispatch the energized products.*`,
+  ];
+
+  return lines.filter(Boolean).join("\n");
+};

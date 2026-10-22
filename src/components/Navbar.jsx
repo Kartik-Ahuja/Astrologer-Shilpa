@@ -1,23 +1,27 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Calendar, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { CONTACT } from "../data";
+import { useBooking } from "../context/BookingContext";
+import { useCart } from "../context/CartContext";
 import AstroLogo from "../Images/AstroLogo.webp";
 
 const NAV = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Consultation", href: "#consultation" },
+  { label: "Online Pooja", href: "#pooja-banner" },
   { label: "Products", href: "/products" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { openBooking } = useBooking();
+  const { cartCount, openCart } = useCart();
 
   const handleSectionClick = (event, href) => {
     if (!href.startsWith("#")) {
@@ -54,35 +58,29 @@ export default function Navbar() {
       data-testid="navbar"
       className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-white/85 backdrop-blur-md border-b border-beige-100 shadow-soft"
+          ? "bg-white/90 backdrop-blur-md border-b border-beige-100 shadow-soft"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 h-24 lg:h-20 flex items-center justify-between">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <a
           href="#home"
           onClick={(event) => handleSectionClick(event, "#home")}
           data-testid="brand-link"
           className="flex items-center gap-3 group"
         >
-          {/* <div className="w-10 h-10 rounded-full bg-gold/10 border border-gold/40 flex items-center justify-center group-hover:bg-gold/20 transition">
-            <span className="font-serif text-gold text-xl">श</span>
-          </div> */}
           <div className="leading-tight">
             <div className="font-serif text-xl text-ink">
               <img
                 src={AstroLogo}
                 alt="Astrologer Shilpa"
-                className="h-14 w-auto max-w-[220px] object-contain sm:h-16 sm:max-w-[235px] lg:h-14 lg:max-w-[215px]"
+                className="h-12 w-auto max-w-[200px] object-contain sm:h-14 sm:max-w-[225px] lg:h-14 lg:max-w-[215px]"
               />
             </div>
-            {/* <div className="text-[10px] tracking-[0.25em] uppercase text-gold-dark">
-              Vedic · Jaipur
-            </div> */}
           </div>
         </a>
 
-        <nav className="hidden lg:flex items-center gap-9">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
           {NAV.map((n) => (
             <Link
               key={n.href}
@@ -97,25 +95,64 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
+          <button
+            type="button"
+            onClick={openCart}
+            aria-label={`Shopping Cart with ${cartCount} items`}
+            className="relative p-2.5 rounded-full border border-gold/40 text-ink hover:bg-gold/10 hover:border-gold transition flex items-center justify-center cursor-pointer"
+          >
+            <ShoppingBag className="w-5 h-5 text-gold-dark" />
+            {cartCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-gold text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-soft">
+                {cartCount}
+              </span>
+            )}
+          </button>
+
+          <Button
+            onClick={() => openBooking({ type: "consultation" })}
+            className="bg-gold hover:bg-gold-dark text-white rounded-full h-11 px-5 shadow-gold hover:shadow-gold-glow transition flex items-center gap-1.5 text-xs font-semibold"
+            data-testid="nav-book-btn"
+          >
+            <Calendar className="w-3.5 h-3.5" /> Book Slot
+          </Button>
+
           <Button
             asChild
-            className="bg-gold hover:bg-gold-dark text-white rounded-full h-11 px-5 shadow-gold hover:shadow-gold-glow transition"
+            variant="outline"
+            className="border-gold/50 text-ink hover:bg-gold/5 rounded-full h-11 px-4 text-xs font-medium"
             data-testid="nav-call-btn"
           >
             <a href={`tel:${CONTACT.phoneRaw}`}>
-              <Phone className="w-4 h-4 mr-2" /> {CONTACT.phone}
+              <Phone className="w-3.5 h-3.5 mr-1.5 text-gold" /> {CONTACT.phone}
             </a>
           </Button>
         </div>
 
-        <button
-          aria-label="Toggle menu"
-          data-testid="nav-mobile-toggle"
-          onClick={() => setOpen((v) => !v)}
-          className="lg:hidden p-3 text-ink"
-        >
-          {open ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <button
+            type="button"
+            onClick={openCart}
+            aria-label={`Shopping Cart with ${cartCount} items`}
+            className="relative p-2 rounded-full border border-gold/40 text-ink hover:bg-gold/10 transition flex items-center justify-center cursor-pointer"
+          >
+            <ShoppingBag className="w-5 h-5 text-gold-dark" />
+            {cartCount > 0 && (
+              <span className="absolute -top-1 -right-1 bg-gold text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                {cartCount}
+              </span>
+            )}
+          </button>
+
+          <button
+            aria-label="Toggle menu"
+            data-testid="nav-mobile-toggle"
+            onClick={() => setOpen((v) => !v)}
+            className="p-2 text-ink"
+          >
+            {open ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -135,12 +172,36 @@ export default function Navbar() {
                 {n.label}
               </Link>
             ))}
-            <a
-              href={`tel:${CONTACT.phoneRaw}`}
-              className="mt-4 inline-flex items-center justify-center gap-2 bg-gold text-white rounded-full py-3 font-medium"
-            >
-              <Phone className="w-4 h-4" /> {CONTACT.phone}
-            </a>
+
+            <div className="pt-4 flex flex-col gap-2">
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setOpen(false);
+                  openCart();
+                }}
+                className="border-gold/60 text-ink rounded-full py-3 font-medium flex items-center justify-center gap-2 text-sm"
+              >
+                <ShoppingBag className="w-4 h-4 text-gold" /> View Cart ({cartCount} {cartCount === 1 ? "item" : "items"})
+              </Button>
+
+              <Button
+                onClick={() => {
+                  setOpen(false);
+                  openBooking({ type: "consultation" });
+                }}
+                className="bg-gold text-white rounded-full py-3 font-medium flex items-center justify-center gap-2"
+              >
+                <Calendar className="w-4 h-4" /> Book Slot (₹1,000 / ₹5,000)
+              </Button>
+
+              <a
+                href={`tel:${CONTACT.phoneRaw}`}
+                className="inline-flex items-center justify-center gap-2 border border-beige-200 text-ink rounded-full py-3 font-medium text-sm"
+              >
+                <Phone className="w-4 h-4 text-gold" /> {CONTACT.phone}
+              </a>
+            </div>
           </nav>
         </div>
       )}
