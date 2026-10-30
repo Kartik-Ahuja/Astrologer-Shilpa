@@ -8,7 +8,7 @@ import ProductCheckoutModal from "./ProductCheckoutModal";
 export default function Products() {
   const { pathname } = useLocation();
   const isHomePage = pathname === "/";
-  const visibleProducts = isHomePage ? PRODUCTS.slice(0, 3) : PRODUCTS;
+  const visibleProducts = isHomePage ? PRODUCTS.slice(0, 6) : PRODUCTS;
 
   const [checkoutProduct, setCheckoutProduct] = useState(null);
   const { addToCart, updateQuantity, getItemQuantity, openCart } = useCart();

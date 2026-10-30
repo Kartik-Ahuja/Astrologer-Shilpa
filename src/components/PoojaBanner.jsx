@@ -1,6 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Flame, Calendar, Package, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import {
+  Flame,
+  Calendar,
+  Package,
+  ArrowUpRight,
+  CheckCircle2,
+} from "lucide-react";
 import { Button } from "./ui/button";
 import { useBooking } from "../context/BookingContext";
 import { ONLINE_POOJAS } from "../data";
@@ -33,23 +40,22 @@ export default function PoojaBanner() {
           </div>
 
           <h2 className="font-serif text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.08] text-white">
-            All <span className="gold-text italic">Online Pooja</span> Services Available
+            All <span className="gold-text italic">Online Pooja</span> Services
+            Available
           </h2>
 
           {/* Pricing Highlight */}
           <div className="mt-5 inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white/10 border border-gold/40 text-gold text-sm sm:text-base font-medium">
             <Flame className="w-4 h-4 text-orange-400" />
-            <span>Pooja Dakshina: <strong>₹5,000/-</strong> (Full Vidhi)</span>
+            <span>
+              Pooja Dakshina: <strong>₹5,000/-</strong> (Full Vidhi)
+            </span>
           </div>
 
           <p className="mt-5 text-white/80 text-sm sm:text-base leading-relaxed">
-            Traditional poojas performed with complete Vedic vidhi and personalized sankalp on your Name &amp; Gotra.
+            Traditional poojas performed with complete Vedic vidhi and
+            personalized sankalp on your Name &amp; Gotra.
           </p>
-
-          <div className="mt-4 flex items-center gap-2 text-xs text-amber-200/90 bg-amber-950/40 border border-amber-500/30 px-3.5 py-2.5 rounded-xl">
-            <Package className="w-4 h-4 text-gold shrink-0" />
-            <span>Sanctified Prasad &amp; energized Raksha Sutra couriered to your home address.</span>
-          </div>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <Button
@@ -58,7 +64,19 @@ export default function PoojaBanner() {
               className="bg-gold hover:bg-gold-dark text-[#111] font-semibold rounded-full h-14 px-7 shadow-gold hover:shadow-gold-glow transition text-sm flex items-center justify-center gap-2"
               data-testid="pooja-cta"
             >
-              <Calendar className="w-5 h-5 text-black" /> Book Pooja Slot (₹5,000)
+              <Calendar className="w-5 h-5 text-black" /> Book Pooja Slot
+              (₹5,000)
+            </Button>
+
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-gold/60 text-white hover:bg-gold/15 hover:text-gold rounded-full h-14 px-7 text-sm font-semibold transition flex items-center justify-center"
+            >
+              <Link to="/online-pooja">
+                View All Pooja Details →
+              </Link>
             </Button>
           </div>
         </motion.div>

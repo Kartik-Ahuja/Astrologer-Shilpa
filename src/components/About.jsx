@@ -84,7 +84,7 @@ export default function About() {
           <div className="grid sm:grid-cols-3 gap-5 mt-10">
             {[
               { icon: Sparkles, k: "10,000+", v: "Consultations" },
-              { icon: Heart, k: "98%", v: "Client Satisfaction" },
+              { icon: Heart, k: "100%", v: "Client Satisfaction" },
               { icon: Award, k: "All India", v: "Online Reach" },
             ].map((s, i) => (
               <div

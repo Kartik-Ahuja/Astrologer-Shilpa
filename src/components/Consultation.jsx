@@ -113,6 +113,15 @@ export default function Consultation() {
             </a>
           </Button>
         </div>
+
+        <div className="mt-8 text-center">
+          <a
+            href="#offline-consultation"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm text-gold-dark hover:text-gold font-medium transition underline underline-offset-4"
+          >
+            <span>Prefer an In-Person Face-to-Face Visit in Jaipur? Fill the Offline Consultation Form ↓</span>
+          </a>
+        </div>
       </div>
     </section>
   );

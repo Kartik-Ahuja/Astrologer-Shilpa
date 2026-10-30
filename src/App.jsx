@@ -9,6 +9,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import WhyUs from "./components/WhyUs";
 import Consultation from "./components/Consultation";
+import OfflineConsultation from "./components/OfflineConsultation";
 import PoojaBanner from "./components/PoojaBanner";
 import Testimonials from "./components/Testimonials";
 import Process from "./components/Process";
@@ -19,6 +20,7 @@ import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Products from "./components/Products";
 import ProductPage from "./components/ProductPage";
 import ProductsPage from "./components/ProductsPage";
+import OnlinePoojaPage from "./components/OnlinePoojaPage";
 import BookingPage from "./components/BookingPage";
 import BookingModal from "./components/BookingModal";
 import CartDrawer from "./components/CartDrawer";
@@ -48,6 +50,7 @@ const Home = () => (
       <Services />
       <WhyUs />
       <Consultation />
+      <OfflineConsultation />
       <Products />
       <PoojaBanner />
       <Testimonials />
@@ -70,6 +73,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/book" element={<BookingPage />} />
+              <Route path="/online-pooja" element={<OnlinePoojaPage />} />
+              <Route path="/pooja" element={<OnlinePoojaPage />} />
               <Route path="/products" element={<ProductsPage />} />
               <Route path="/products/:slug" element={<ProductPage />} />
               <Route path="/product/:slug" element={<ProductPage />} />

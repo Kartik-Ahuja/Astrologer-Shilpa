@@ -84,8 +84,7 @@ export default function Hero() {
               className="w-full sm:w-auto bg-gold hover:bg-gold-dark text-white rounded-full h-12 px-6 text-sm sm:text-base font-medium shadow-gold hover:shadow-gold-glow transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center"
               data-testid="hero-book-btn"
             >
-              <Calendar className="w-5 h-5 mr-2" /> Book Slot (₹1,000 /
-              10minute)
+              <Calendar className="w-5 h-5 mr-2" /> Book Slot
             </Button>
             <Button
               asChild

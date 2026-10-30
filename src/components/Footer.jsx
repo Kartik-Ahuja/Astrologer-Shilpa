@@ -9,6 +9,8 @@ const QUICK = [
   { label: "Services", href: "#services" },
   { label: "Book Slot", href: "/book" },
   { label: "Consultation", href: "#consultation" },
+  { label: "Offline Visit", href: "#offline-consultation" },
+  { label: "Online Pooja", href: "/online-pooja" },
   { label: "Products", href: "/products" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
