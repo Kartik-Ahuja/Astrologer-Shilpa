@@ -259,10 +259,10 @@ export default function OfflineConsultation() {
                 </div>
                 <div>
                   <span className="text-[11px] uppercase tracking-wider text-gold-dark font-bold">
-                    Consultation Center
+                    Consultation Address
                   </span>
                   <h3 className="font-serif text-2xl text-ink font-semibold">
-                    Jaipur Chamber
+                    Jaipur Center
                   </h3>
                 </div>
               </div>

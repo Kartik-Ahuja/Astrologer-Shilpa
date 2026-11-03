@@ -113,9 +113,24 @@ export default function UpiPaymentBox({
       return;
     }
 
+    // Check for obvious repeating digits (e.g. 000000000000, 111111111111)
+    if (/^(\d)\1{11}$/.test(cleanUtr)) {
+      toast.error("Invalid UTR: Repeated dummy numbers are not allowed. Please enter the genuine 12-digit UTR from your UPI payment.");
+      return;
+    }
+
+    // Check for sequential dummy numbers (e.g. 123456789012, 987654321098)
+    if (
+      "01234567890123456789".includes(cleanUtr) ||
+      "98765432109876543210".includes(cleanUtr)
+    ) {
+      toast.error("Invalid UTR: Sequential test numbers are not allowed. Please enter the actual 12-digit UTR from your UPI receipt.");
+      return;
+    }
+
     onPaymentConfirmed({
       paymentId: cleanUtr,
-      paymentStatus: "paid",
+      paymentStatus: "pending_verification",
       utr: cleanUtr,
       paymentMethod: "UPI",
       screenshot: screenshotPreview || null,
@@ -437,14 +452,14 @@ export default function UpiPaymentBox({
           </div>
 
           {/* 7. Anti-Fraud & Security Guarantee */}
-          <div className="p-3.5 rounded-2xl bg-amber-50/60 border border-amber-200/70 text-xs text-amber-950 flex items-start gap-2.5">
+          <div className="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-300 text-xs text-amber-950 flex items-start gap-2.5">
             <Lock className="w-4 h-4 text-amber-800 shrink-0 mt-0.5" />
             <div className="space-y-0.5">
               <span className="font-bold text-amber-950 block">
-                Bank-Grade Anti-Fraud Protection
+                Manual Bank Verification Required
               </span>
               <p className="text-[11px] text-amber-900 leading-relaxed">
-                Orders and consultations are dispatched only after matching the 12-digit UTR with Astrologer Shilpa's bank credit alerts.
+                Parcels are dispatched and slots confirmed strictly after matching this 12-digit UTR with Astrologer Shilpa's bank credit alerts. Invalid or unpaid UTRs will lead to immediate cancellation.
               </p>
             </div>
           </div>
@@ -459,8 +474,8 @@ export default function UpiPaymentBox({
             <ShieldCheck className="w-5 h-5" />
             <span>
               {isProcessing
-                ? "Verifying Payment..."
-                : `I Have Paid ₹${amount.toLocaleString("en-IN")} · Confirm Order`}
+                ? "Submitting UTR..."
+                : `Submit UTR (₹${amount.toLocaleString("en-IN")}) · Confirm on WhatsApp`}
             </span>
           </Button>
         </div>

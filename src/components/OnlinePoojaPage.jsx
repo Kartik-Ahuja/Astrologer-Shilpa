@@ -58,13 +58,13 @@ export default function OnlinePoojaPage() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
     document.title =
-      "Online Vedic Pooja Services | Authentic Vidhi, Sankalp & Prasad | Astrologer Shilpa";
+      "Online Vedic Pooja Services | Authentic Vidhi, Sankalp & Video Proof | Astrologer Shilpa";
 
     const description = document.querySelector('meta[name="description"]');
     if (description) {
       description.setAttribute(
         "content",
-        "Book authentic online Vedic poojas with personalized Sankalp on your Name & Gotra. 100% Vedic vidhi, live video clips on WhatsApp, and energized Prasad delivered across India.",
+        "Book authentic online Vedic poojas with personalized Sankalp on your Name & Gotra. 100% Vedic vidhi, live video clips on WhatsApp, and sacred Vedic blessings.",
       );
     }
   }, []);
@@ -121,15 +121,14 @@ export default function OnlinePoojaPage() {
               <Sparkles className="w-4 h-4 text-gold-dark" />
               <span>
                 Pooja Dakshina: <strong>₹5,000/- Flat</strong> (Full Shastric
-                Vidhi + Samagri + Havan + Video Proof + Prasad Delivery)
+                Vidhi + Samagri + Havan + Video Proof on WhatsApp)
               </span>
             </div>
 
             <p className="text-ink-muted text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
               Resolve persistent planetary doshas, health worries, financial
               stagnation, and marriage delays. Conducted with authentic Shastric
-              vidhi, sacred havan, real-time video proof on WhatsApp, and
-              sanctified Prasad delivered across India.
+              vidhi, sacred havan, and real-time video proof on WhatsApp.
             </p>
 
             {/* Hero CTAs */}
@@ -175,14 +174,14 @@ export default function OnlinePoojaPage() {
                   desc: "Clear video clips & photos of your Sankalp & Havan",
                 },
                 {
-                  icon: Package,
-                  title: "Doorstep Prasad Delivery",
-                  desc: "Blessed Prasad, Yantra & Raksha Sutra couriered",
+                  icon: ShieldCheck,
+                  title: "100% Shastric Vidhi",
+                  desc: "Complete Vedic rituals with sacred samagri & havan",
                 },
                 {
                   icon: Award,
                   title: "Certified Vedic Pandits",
-                  desc: "100% Shastric vidhi guided by Astrologer Shilpa ji",
+                  desc: "Guided with proper intonations by Astrologer Shilpa ji",
                 },
               ].map((item, i) => (
                 <div
@@ -220,7 +219,7 @@ export default function OnlinePoojaPage() {
               <div className="gold-divider w-24 mx-auto my-5" />
               <p className="text-ink-muted text-sm sm:text-base leading-relaxed">
                 Step-by-step process of how your online Vedic pooja is performed
-                with authentic rituals from booking to prasad delivery.
+                with authentic rituals from booking to completion.
               </p>
             </div>
 
@@ -248,8 +247,8 @@ export default function OnlinePoojaPage() {
                 },
                 {
                   step: "05",
-                  title: "Prasad Courier",
-                  desc: "Energized Yantra, protective Raksha Sutra, and holy dry-fruit Prasad are dispatched to your doorstep.",
+                  title: "Purna Ahuti & Blessings",
+                  desc: "Ritual concludes with sacred Purna Ahuti, Shanti Paath, and Vedic blessings for the devotee's family.",
                 },
               ].map((s, idx) => (
                 <div
@@ -290,7 +289,7 @@ export default function OnlinePoojaPage() {
               <p className="text-ink-muted text-sm sm:text-base leading-relaxed">
                 Choose a pooja below to read the complete vidhi details or book
                 your personal Sankalp. Each pooja includes full Vedic rituals,
-                live WhatsApp video clips, and home Prasad delivery.
+                individual sankalp, and live WhatsApp video clips.
               </p>
 
               {/* Category Filter Pills */}
@@ -379,7 +378,7 @@ export default function OnlinePoojaPage() {
                           <li className="flex items-center gap-2">
                             <Check className="w-3.5 h-3.5 text-gold shrink-0" />
                             <span>
-                              WhatsApp Video Proof &amp; Prasad Delivery
+                              WhatsApp Live Video Proof &amp; Blessings
                             </span>
                           </li>
                         </ul>
@@ -630,8 +629,8 @@ export default function OnlinePoojaPage() {
                   a: "Aapki pooja shuru hone par Pandit ji dwara aapka Naam aur Gotra bolte hue personal Sankalp ka video recording aur Havan ki clear photos WhatsApp par same day share ki jati hain.",
                 },
                 {
-                  q: "Prasad mere ghar kab tak pahuchega?",
-                  a: "Pooja sampann hone ke baad sanctified Prasad (dry fruits, mishri), energized Raksha Sutra (suraksha dhaga) aur blessed Yantra ko speed post/courier se pack karke bhej diya jata hai, jo 3 se 5 dino me deliver ho jata hai.",
+                  q: "Pooja ka video clips aur proof kab tak milta hai?",
+                  a: "Aapki pooja shuru hone aur sampann hone par Pandit ji dwara aapka Naam aur Gotra bolte hue personal Sankalp ka video recording aur Havan ki clear photos WhatsApp par same day share ki jati hain.",
                 },
                 {
                   q: "Mujhe pooja ke samay kya karna hoga?",

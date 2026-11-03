@@ -35,7 +35,7 @@ export default function BookingPage() {
           </h1>
           <div className="gold-divider w-24 mx-auto my-5" />
           <p className="text-ink-muted text-base leading-relaxed">
-            Select your preferred date &amp; time slot, enter devotee details with Prasad delivery address, and complete direct payment via UPI (GPay/PhonePe/Paytm).
+            Select your preferred date &amp; time slot, enter devotee details for Sankalp, and complete direct payment via UPI (GPay/PhonePe/Paytm).
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -119,7 +119,7 @@ export default function BookingPage() {
             <div className="mt-4 font-serif text-3xl font-bold text-gold-dark">
               ₹5,000{" "}
               <span className="text-xs text-ink-muted font-normal font-sans">
-                / Full Vidhi &amp; Prasad Delivery
+                / Full Shastric Vidhi &amp; Video Proof
               </span>
             </div>
 

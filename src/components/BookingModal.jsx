@@ -194,7 +194,7 @@ export default function BookingModal({
     }
     if (!formData.address.trim()) {
       toast.error(
-        "Please enter your complete address for Prasad/Blessing delivery.",
+        "Please enter your residence address for Sankalp.",
       );
       return;
     }
@@ -455,8 +455,8 @@ export default function BookingModal({
                   >
                     <div className="flex items-center justify-between">
                       <span className="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800">
-                        <Flame className="w-3.5 h-3.5 text-orange-600" /> Vidhi
-                        + Prasad Delivery
+                        <Flame className="w-3.5 h-3.5 text-orange-600" /> Full Vidhi
+                        + Video Proof
                       </span>
                       {bookingType === "pooja" && (
                         <CheckCircle2 className="w-5 h-5 text-gold" />
@@ -466,7 +466,7 @@ export default function BookingModal({
                       Online Vedic Pooja
                     </div>
                     <div className="text-xs text-ink-muted mt-0.5">
-                      With Personal Sankalp &amp; Prasad
+                      With Personal Sankalp &amp; Video Proof
                     </div>
                     <div className="mt-3 font-semibold text-gold-dark text-lg">
                       ₹5,000{" "}
@@ -602,7 +602,7 @@ export default function BookingModal({
             </div>
           )}
 
-          {/* STEP 2: DEVOTEE DETAILS & PRASAD DELIVERY ADDRESS */}
+          {/* STEP 2: DEVOTEE DETAILS & RESIDENCE ADDRESS */}
           {step === 2 && (
             <div className="space-y-5">
               <div className="p-3.5 rounded-2xl bg-gold/10 border border-gold/30 text-ink text-xs flex items-center justify-between">
@@ -727,22 +727,19 @@ export default function BookingModal({
                 </div>
               </div>
 
-              {/* Delivery Address for Prasad */}
+              {/* Devotee Residence / City Location */}
               <div className="pt-2 border-t border-beige-100">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xs uppercase tracking-widest font-bold text-ink flex items-center gap-2">
-                    <Package className="w-4 h-4 text-gold" /> 3. Prasad &amp;
-                    Blessings Delivery Address *
+                    <MapPin className="w-4 h-4 text-gold" /> 3. Devotee Residence / Location *
                   </h3>
-                  <span className="text-[11px] text-orange-800 bg-orange-100 px-2 py-0.5 rounded-full font-medium">
-                    Courier Delivery
+                  <span className="text-[11px] text-gold-dark bg-gold/10 px-2 py-0.5 rounded-full font-medium">
+                    For Vedic Sankalp
                   </span>
                 </div>
 
-                <div className="p-3 bg-amber-50/60 rounded-xl border border-amber-200/70 mb-3 text-xs text-amber-900 leading-relaxed">
-                  📦 <strong>Prasad Dispatch:</strong> Sanctified Prasad, Raksha
-                  Sutra, and energized Yantra will be safely dispatched to this
-                  address after pooja.
+                <div className="p-3 bg-gold/5 rounded-xl border border-gold/20 mb-3 text-xs text-ink-muted leading-relaxed">
+                  📍 <strong>Sthana (Location) Sankalp:</strong> Your city and residence details are recited by the Vedic Pandits during the sacred Sankalp rituals.
                 </div>
 
                 <div className="space-y-3">
@@ -872,7 +869,7 @@ export default function BookingModal({
 
                   <div className="sm:col-span-2 pt-2 border-t border-beige-200/80">
                     <span className="text-ink-muted block uppercase tracking-wider text-[10px]">
-                      Prasad &amp; Yantra Delivery Address
+                      Devotee Residence / Location
                     </span>
                     <div className="font-medium text-ink mt-0.5 flex items-start gap-1.5">
                       <MapPin className="w-3.5 h-3.5 text-gold shrink-0 mt-0.5" />
@@ -897,26 +894,26 @@ export default function BookingModal({
             </div>
           )}
 
-          {/* STEP 4: SUCCESS & WHATSAPP DISPATCH */}
+          {/* STEP 4: SUBMITTED & WHATSAPP VERIFICATION */}
           {step === 4 && completedBooking && (
             <div className="text-center space-y-5 py-2">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center shadow-soft">
-                <CheckCircle2 className="w-9 h-9" />
+              <div className="w-16 h-16 rounded-full bg-amber-100 text-amber-700 mx-auto flex items-center justify-center shadow-soft">
+                <Clock className="w-9 h-9" />
               </div>
 
               <div>
-                <span className="inline-block text-[11px] uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full font-bold mb-2">
-                  ✅ Payment Done via UPI (
+                <span className="inline-block text-[11px] uppercase tracking-widest text-amber-900 bg-amber-100 border border-amber-300 px-3 py-1 rounded-full font-bold mb-2">
+                  ⏳ Payment Verification Pending (
                   {completedBooking.utr
                     ? `UTR: ${completedBooking.utr}`
                     : `ID: #${completedBooking.bookingId}`}
                   )
                 </span>
                 <h3 className="font-serif text-2xl sm:text-3xl text-ink font-semibold">
-                  Booking Payment Submitted!
+                  Booking Request Submitted!
                 </h3>
                 <p className="mt-1.5 text-xs text-gold-dark font-bold uppercase tracking-wider">
-                  Final Step: Confirm Slot with Shilpa ji on WhatsApp
+                  Final Step: Send Details to Shilpa ji on WhatsApp for Bank Verification
                 </p>
               </div>
 
@@ -933,7 +930,7 @@ export default function BookingModal({
                         : "Opening WhatsApp now..."}
                     </div>
                     <div className="text-[11px] text-amber-800">
-                      Redirecting to WhatsApp to send your slot & consultation details to Astrologer Shilpa
+                      Sending slot &amp; UTR details to Astrologer Shilpa for bank verification
                     </div>
                   </div>
                 </div>
@@ -949,11 +946,11 @@ export default function BookingModal({
                 </div>
 
                 <p className="text-xs text-amber-900 leading-relaxed">
-                  Payment received successfully!{" "}
+                  Your booking details and UTR have been recorded!{" "}
                   <strong>
-                    {countdown > 0 ? `In ${countdown} seconds, ` : ""}your verified booking receipt will automatically open on WhatsApp
+                    {countdown > 0 ? `In ${countdown} seconds, ` : ""}your booking summary will open on WhatsApp
                   </strong>
-                  , where you simply need to tap 'Send' so Shilpa ji can lock and confirm your slot on the schedule.
+                  , where you simply need to tap 'Send' so Shilpa ji can match the UTR in bank records and confirm your slot.
                 </p>
 
                 <p className="text-[11px] text-amber-800/90 font-medium">
@@ -970,15 +967,15 @@ export default function BookingModal({
                   </span>
                 </div>
                 <div className="flex justify-between border-b border-beige-200/80 pb-2">
-                  <span className="text-ink-muted">Total Paid:</span>
+                  <span className="text-ink-muted">Dakshina / Fee:</span>
                   <span className="font-bold text-gold-dark">
                     ₹{completedBooking.amount?.toLocaleString("en-IN")}
                   </span>
                 </div>
-                <div className="flex justify-between border-b border-beige-200/80 pb-2">
+                <div className="flex justify-between border-b border-beige-200/80 pb-2 items-center">
                   <span className="text-ink-muted">UPI UTR Ref:</span>
-                  <span className="font-mono font-bold text-emerald-700">
-                    {completedBooking.utr}
+                  <span className="font-mono font-bold text-amber-900 bg-amber-100/80 px-2 py-0.5 rounded border border-amber-200">
+                    {completedBooking.utr} (Pending Bank Match)
                   </span>
                 </div>
                 <div className="flex justify-between border-b border-beige-200/80 pb-2">

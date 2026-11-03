@@ -4,6 +4,7 @@ import {
   Package,
   ShieldCheck,
   CheckCircle2,
+  Clock,
   MessageCircle,
   IndianRupee,
   Loader2,
@@ -465,26 +466,26 @@ export default function CartCheckoutModal() {
             </div>
           )}
 
-          {/* STEP 3: SUCCESS & WHATSAPP CONFIRMATION */}
+          {/* STEP 3: SUBMITTED & WHATSAPP VERIFICATION */}
           {step === 3 && completedOrder && (
             <div className="text-center space-y-5 py-2">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center shadow-soft">
-                <CheckCircle2 className="w-9 h-9" />
+              <div className="w-16 h-16 rounded-full bg-amber-100 text-amber-700 mx-auto flex items-center justify-center shadow-soft">
+                <Clock className="w-9 h-9" />
               </div>
 
               <div>
-                <span className="inline-block text-[11px] uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full font-bold mb-2">
-                  ✅ Payment Done via UPI (
+                <span className="inline-block text-[11px] uppercase tracking-widest text-amber-900 bg-amber-100 border border-amber-300 px-3 py-1 rounded-full font-bold mb-2">
+                  ⏳ Payment Verification Pending (
                   {completedOrder.utr
                     ? `UTR: ${completedOrder.utr}`
                     : `ID: #${completedOrder.orderId}`}
                   )
                 </span>
                 <h3 className="font-serif text-2xl sm:text-3xl text-ink font-semibold">
-                  Payment Submitted Successfully!
+                  Order Details Submitted!
                 </h3>
                 <p className="mt-1.5 text-xs text-gold-dark font-bold uppercase tracking-wider">
-                  Final Step: Send Order to Shilpa ji on WhatsApp
+                  Final Step: Send Order &amp; UTR to Shilpa ji on WhatsApp
                 </p>
               </div>
 
@@ -501,7 +502,7 @@ export default function CartCheckoutModal() {
                         : "Opening WhatsApp now..."}
                     </div>
                     <div className="text-[11px] text-amber-800">
-                      Redirecting to WhatsApp to send your order details to Astrologer Shilpa
+                      Sending order receipt &amp; UTR to Astrologer Shilpa for bank verification
                     </div>
                   </div>
                 </div>
@@ -517,11 +518,11 @@ export default function CartCheckoutModal() {
                 </div>
 
                 <p className="text-xs text-amber-900 leading-relaxed">
-                  Payment received successfully!{" "}
+                  Your order details and UTR have been recorded!{" "}
                   <strong>
-                    {countdown > 0 ? `In ${countdown} seconds, ` : ""}your verified order receipt will automatically open on WhatsApp
+                    {countdown > 0 ? `In ${countdown} seconds, ` : ""}your order summary will open on WhatsApp
                   </strong>
-                  , where you simply need to tap 'Send' so Shilpa ji can prepare and dispatch your parcel.
+                  , where you simply need to tap 'Send' so Shilpa ji can match the UTR in bank records and dispatch your parcel.
                 </p>
 
                 <p className="text-[11px] text-amber-800/90 font-medium">
@@ -533,7 +534,7 @@ export default function CartCheckoutModal() {
                 <div className="font-semibold text-ink border-b border-beige-200/80 pb-2 flex justify-between">
                   <span>Items ({completedOrder.totalItems}):</span>
                   <span className="text-gold-dark font-bold">
-                    Total Paid: ₹
+                    Order Amount: ₹
                     {completedOrder.totalAmount?.toLocaleString("en-IN")}
                   </span>
                 </div>
@@ -550,10 +551,10 @@ export default function CartCheckoutModal() {
                     </span>
                   </div>
                 ))}
-                <div className="border-t border-beige-200 pt-2 flex justify-between">
+                <div className="border-t border-beige-200 pt-2 flex justify-between items-center">
                   <span className="text-ink-muted">UPI UTR Ref:</span>
-                  <span className="font-mono font-bold text-emerald-700">
-                    {completedOrder.utr}
+                  <span className="font-mono font-bold text-amber-900 bg-amber-100/80 px-2 py-0.5 rounded border border-amber-200">
+                    {completedOrder.utr} (Pending Bank Match)
                   </span>
                 </div>
                 <div className="border-t border-beige-200 pt-2 flex justify-between">

@@ -52,7 +52,7 @@ export const waLink = (msg) =>
   `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(msg || "Namaste Shilpa ji, I would like to book a consultation.")}`;
 
 export const UPI_CONFIG = {
-  upiId: "navratan0442@ybl",
+  upiId: "sh.agarwal1978-2@okhdfcbank",
   payeeName: "Astrologer Shilpa",
 };
 
@@ -592,19 +592,19 @@ export const BOOKING_CONFIG = {
     id: "pooja",
     type: "pooja",
     title: "Online Vedic Pooja",
-    badge: "Full Vidhi + Prasad Delivery",
+    badge: "Full Shastric Vidhi + Video Proof",
     price: 5000,
     formattedPrice: "₹5,000",
     duration: "Complete Vedic Ritual",
     subtitle:
       "Performed on your behalf with personal Sankalp on your Name & Gotra.",
     description:
-      "Traditional Vedic pooja guided by Shilpa ji and Vedic Pandits with proper sankalp. Sanctified Prasad, Raksha Sutra & Yantra delivered to your home address.",
+      "Traditional Vedic pooja guided by Shilpa ji and Vedic Pandits with proper sankalp. Live photos and video clips sent on WhatsApp.",
     features: [
       "Personal Sankalp with your Name & Gotra",
       "Vedic Pandits reciting sacred Vedic mantras",
       "Live photos / video clips sent on WhatsApp",
-      "Doorstep delivery of sanctified Prasad & Raksha Kavach",
+      "Complete Samidha Havan with Vedic Ahutis",
     ],
   },
 };
@@ -649,7 +649,7 @@ export const ONLINE_POOJAS = [
       "Individual Sankalp on your Name & Gotra",
       "Live Video clips of your Sankalp & Havan on WhatsApp",
       "Energized Navgrah Yantra for home temple",
-      "Sanctified dry-fruit Prasad couriered to your doorstep",
+      "Complete Samidha Havan & Vedic Shanti Paath",
     ],
     idealFor:
       "Anyone experiencing Sade Sati, planetary mahadasha stress, sudden business losses, or constant unexplained blockages.",
@@ -682,7 +682,7 @@ export const ONLINE_POOJAS = [
       "Personalized healing Sankalp for the patient/devotee",
       "Video clips of Abhishek and Havan sent on WhatsApp",
       "Blessed Shiva Bhasma (vibhuti) & protective Raksha Sutra",
-      "Energized Mahamrityunjay Yantra & sanctified Prasad courier",
+      "Consecrated Mahamrityunjay Kavach Path & Maha Aarti",
     ],
     idealFor:
       "People suffering from prolonged illness, critical recovery, psychological anxiety, Markesh dasha, or seeking life protection.",
@@ -715,7 +715,7 @@ export const ONLINE_POOJAS = [
       "Personal Sankalp dissolving serpentine karmic blocks",
       "Video recordings of the Naag pujan and ahutis on WhatsApp",
       "Energized Kaal Sarp Nivaran Yantra for your home",
-      "Sanctified dry-fruit prasad & holy thread couriered",
+      "Nag Gayatri Path & Complete Sarpa Shanti Blessings",
     ],
     idealFor:
       "Individuals whose kundli indicates Anant, Kulik, Vasuki, Shankhpal, or any of the 12 types of Kaal Sarp Yog.",
@@ -748,7 +748,7 @@ export const ONLINE_POOJAS = [
       "Customized Sankalp for timely marriage and peaceful union",
       "Full video clips of Mangal Havan sent via WhatsApp",
       "Energized Mangal Yantra & consecrated red raksha sutra",
-      "Sanctified temple prasad delivered to your home address",
+      "Mangal Shanti Ahutis & Saubhagya Blessings",
     ],
     idealFor:
       "Anyone who is Anshik or Purna Manglik, facing delay in marriage or relationship disputes.",
@@ -781,7 +781,7 @@ export const ONLINE_POOJAS = [
       "Personal/Business Sankalp for exponential financial growth",
       "Live footage and clips of Shree Suktam havan on WhatsApp",
       "Energized Brass Shree Yantra & Kuber Coin for cash locker",
-      "Prasad & energized Gomti Chakra couriered to your doorstep",
+      "Rigvedic Shree Suktam Ahutis & Dhana-Vridhi Blessings",
     ],
     idealFor:
       "Entrepreneurs, business owners, professionals seeking promotion, and families desiring financial stability and debt relief.",
@@ -814,7 +814,7 @@ export const ONLINE_POOJAS = [
       "Customized Sankalp for your specific project/exam/deal",
       "Video clips of Atharvashirsha path and Havan on WhatsApp",
       "Energized Ganesh Yantra / Silver Coin for your office/temple",
-      "Sanctified dry-fruit Prasad delivered to your address",
+      "Ganapati Atharvashirsha Ahutis & Vighnaharta Blessings",
     ],
     idealFor:
       "Anyone starting a new company, signing major contracts, students preparing for crucial exams, or moving into a new home.",
@@ -847,7 +847,7 @@ export const ONLINE_POOJAS = [
       "Complete family Sankalp under the holy Rudradhara",
       "High-definition video clips of the Abhishekam on WhatsApp",
       "Sanctified Shiva Bhasma (vibhuti) & holy Rudraksha bead",
-      "Dry-fruit Prasad couriered directly to your home",
+      "Sacred Bilva Patra Archana & Shiva Shanti Paath",
     ],
     idealFor:
       "Spiritual seekers, families wanting harmony, people going through intense planetary testing, or chronic health issues.",
@@ -880,7 +880,7 @@ export const ONLINE_POOJAS = [
       "Ancestral lineage Sankalp on your Gotra",
       "Real-time video clips of Tarpana and Havan sent on WhatsApp",
       "Energized Pitra Dosh Nivaran Kavach/Yantra",
-      "Sanctified holy Prasad dispatched to your address",
+      "Pitru Tarpana Sankalp & Ancestral Shanti Blessings",
     ],
     idealFor:
       "Families struggling with progeny delays, persistent domestic conflict, inherited health issues, or dream omens of ancestors.",
@@ -913,7 +913,7 @@ export const ONLINE_POOJAS = [
       "Personalized Sankalp for timely marriage and harmonious partner",
       "Video clips of the Gauri-Shankar pujan sent via WhatsApp",
       "Blessed Gauri-Shankar Raksha Sutra & Saubhagya Sindoor",
-      "Dry-fruit Prasad couriered to your home address",
+      "Akhand Dampatya Blessings & Vivah Bandhan Havan",
     ],
     idealFor:
       "Unmarried individuals facing delays, parents searching for a compatible match for their child, or couples wanting deeper harmony.",
@@ -941,8 +941,8 @@ export const formatBookingWhatsAppMessage = (booking) => {
     `*Booking ID:* #${booking.bookingId || "PENDING"}`,
     `*Service:* ${booking.serviceName || (isPooja ? "Online Vedic Pooja" : "10 Min Audio Consultation")}`,
     `*Fee / Dakshina:* ₹${booking.amount?.toLocaleString("en-IN") || (isPooja ? "5,000" : "1,000")}`,
-    `*Payment Method:* ⚡ Direct UPI (0% Fee)`,
-    `*Payment Status:* ✅ Paid via UPI (${booking.utr ? `UTR: ${booking.utr}` : `Ref: ${booking.paymentId || "CONFIRMED"}`})`,
+    `*Payment Mode:* ⚡ Direct UPI (Shilpa ji's HDFC Account)`,
+    `*Payment Status:* ⏳ Verification Pending (UTR: ${booking.utr || "N/A"})`,
     `*UPI ID:* ${UPI_CONFIG.upiId}`,
     booking.screenshot ? `• *Receipt Screenshot:* (Attached)` : null,
     ``,
@@ -959,7 +959,7 @@ export const formatBookingWhatsAppMessage = (booking) => {
     booking.birthPlace ? `• Birth Place: ${booking.birthPlace}` : null,
     booking.gotra ? `• Gotra / Father's Name: ${booking.gotra}` : null,
     ``,
-    `📦 *DELIVERY ADDRESS (FOR PRASAD & BLESSINGS):*`,
+    `🏠 *DEVOTEE RESIDENCE / LOCATION:*`,
     `• Address: ${booking.address || "N/A"}`,
     booking.landmark ? `• Landmark: ${booking.landmark}` : null,
     `• City: ${booking.city || "N/A"}, ${booking.state || "Rajasthan"}`,
@@ -968,7 +968,8 @@ export const formatBookingWhatsAppMessage = (booking) => {
     booking.notes
       ? `💬 *Sankalp / Concern / Question:*\n"${booking.notes}"\n`
       : null,
-    `🙏 *Namaste Shilpa ji, please review and confirm this booking.*`,
+    `🙏 *Namaste Shilpa ji, I have submitted this booking request with UTR #${booking.utr || "PENDING"}. Please verify in your bank account and confirm my slot.*`,
+    `⚠️ _(Note for Shilpa ji: Kripya slot confirm karne se pehle apne bank SMS/app me yeh UTR check kar lein)_`,
   ];
 
   return lines.filter(Boolean).join("\n");
@@ -981,10 +982,10 @@ export const formatProductOrderWhatsAppMessage = (order) => {
     `*Order ID:* #${order.orderId || "CONFIRMED"}`,
     `*Product:* ${order.productName} (Qty: ${order.quantity || 1})`,
     `*Amount:* ₹${order.amount?.toLocaleString("en-IN")}`,
-    `*Payment Method:* ⚡ Direct UPI (0% Fee)`,
-    `*Payment Status:* ✅ Paid via UPI (${order.utr ? `UTR: ${order.utr}` : `Ref: ${order.paymentId || "CONFIRMED"}`})`,
+    `*Payment Mode:* ⚡ Direct UPI (Shilpa ji's HDFC Account)`,
+    `*Payment Status:* ⏳ Verification Pending (UTR: ${order.utr || "N/A"})`,
     `*UPI ID:* ${UPI_CONFIG.upiId}`,
-    order.screenshot ? `• *Receipt Screenshot:* (Attached)` : null,
+    order.screenshot ? `• *Receipt Screenshot:* (Attached in chat)` : null,
     ``,
     `👤 *CUSTOMER DETAILS:*`,
     `• Name: ${order.name}`,
@@ -997,7 +998,8 @@ export const formatProductOrderWhatsAppMessage = (order) => {
     `• City: ${order.city}, ${order.state || "Rajasthan"}`,
     `• Pincode: ${order.pincode}`,
     ``,
-    `🙏 *Namaste Shilpa ji, I have completed the payment via UPI for this order on your website. Please dispatch the energized product to my address.*`,
+    `🙏 *Namaste Shilpa ji, I have placed this order on your website with UPI UTR #${order.utr || "PENDING"}. Please verify in your bank account and dispatch to my address.*`,
+    `⚠️ _(Note for Shilpa ji: Kripya parcel dispatch karne se pehle apne bank SMS/app me yeh UTR check kar lein)_`,
   ];
 
   return lines.filter(Boolean).join("\n");
@@ -1017,10 +1019,10 @@ export const formatMultiItemOrderWhatsAppMessage = (order) => {
     `*Order ID:* #${order.orderId || "CONFIRMED"}`,
     `*Total Items:* ${order.totalItems || order.items?.length || 1}`,
     `*Total Amount:* ₹${order.totalAmount?.toLocaleString("en-IN")}`,
-    `*Payment Method:* ⚡ Direct UPI (0% Fee)`,
-    `*Payment Status:* ✅ Paid via UPI (${order.utr ? `UTR: ${order.utr}` : `Ref: ${order.paymentId || "CONFIRMED"}`})`,
+    `*Payment Mode:* ⚡ Direct UPI (Shilpa ji's HDFC Account)`,
+    `*Payment Status:* ⏳ Verification Pending (UTR: ${order.utr || "N/A"})`,
     `*UPI ID:* ${UPI_CONFIG.upiId}`,
-    order.screenshot ? `• *Receipt Screenshot:* (Attached)` : null,
+    order.screenshot ? `• *Receipt Screenshot:* (Attached in chat)` : null,
     ``,
     `📦 *ORDERED ITEMS:*`,
     itemsList,
@@ -1036,7 +1038,8 @@ export const formatMultiItemOrderWhatsAppMessage = (order) => {
     `• City: ${order.city}, ${order.state || "Rajasthan"}`,
     `• Pincode: ${order.pincode}`,
     ``,
-    `🙏 *Namaste Shilpa ji, I have placed this order and completed payment via UPI. Please dispatch the energized products.*`,
+    `🙏 *Namaste Shilpa ji, I have placed this cart order on your website with UPI UTR #${order.utr || "PENDING"}. Please verify in your bank account and dispatch the energized products.*`,
+    `⚠️ _(Note for Shilpa ji: Kripya parcel dispatch karne se pehle apne bank SMS/app me yeh UTR check kar lein)_`,
   ];
 
   return lines.filter(Boolean).join("\n");
