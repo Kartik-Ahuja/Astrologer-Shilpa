@@ -37,9 +37,9 @@ import ChakraFrame from "./Images/ChakraFrame.webp";
 import TigerStone from "./Images/TigerStone.webp";
 
 export const CONTACT = {
-  phone: "+91 89499 36535",
-  phoneRaw: "+918949936535",
-  whatsapp: "918949936535",
+  phone: "+91 97695 71305",
+  phoneRaw: "+919769571305",
+  whatsapp: "9769571305",
   email: "astrologershipla1@gmail.com",
   address:
     "B Block 302, Manglam Garden City, Near Manglam Tarang, Near Muhana Gaav, Muhana, Jaipur, Rajasthan 302029",
